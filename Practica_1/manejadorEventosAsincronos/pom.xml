@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>es.ugr.dss</groupId>
-	<artifactId>manejadorEventosAsincronos</artifactId>
+	<artifactId>EstevezAythami-P1</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>manejadorEventosAsincronos Maven Webapp</name>
+	<name>EstevezAythami-P1 Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<dependency>
@@ -27,6 +27,6 @@
 
 	</dependencies>
 	<build>
-		<finalName>manejadorEventosAsincronos</finalName>
+		<finalName>EstevezAythami-P1</finalName>
 	</build>
 </project>

@@ -9,12 +9,12 @@
  */
 package es.ugr.dss;
 
+import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
 import javax.faces.event.ActionEvent;
 
 @ManagedBean(name="controlMB", eager=true)
-@SessionScoped
+@ApplicationScoped
 /**
  * Clase de tipo ManagedBean encargada de controlar los eventos lanzados desde
  * la vista y variar los elementos de la vista en función de estos.
@@ -48,13 +48,16 @@ public class ControlMB {
 
 	/**
 	 * Constructor para asegurarse que los atributos tienen los valores iniciales
-	 * adecuados
+	 * adecuados, además invoca el método que crea el patron Interceptor y 
+	 * despliega la interfaz al lanzarse una peticion de cliente
 	 */
 	public ControlMB() {
 		panel = "Apagado";
 		estado = Estado.Apagado;
 		txtBoton = "Encender";
 		colorBoton= "green";
+		
+		Main.main(null);
 	}
 
 	

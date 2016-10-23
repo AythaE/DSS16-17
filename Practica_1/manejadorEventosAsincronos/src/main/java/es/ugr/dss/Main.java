@@ -9,38 +9,25 @@
  */
 package es.ugr.dss;
 
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
-import javax.servlet.annotation.WebListener;
-
 /**
- * Clase Main (equivalente a DemoInteceptor en el ejemplo) que implementa 
- * {@link ServletContextListener} para ejecutar el método 
- * {@link ServletContextListener#contextInitialized(ServletContextEvent)} que
- * se ejecuta cuando Tomcat carga el .war y de esta manera realizar el despliege
- * de la interfaz y ejecutar la cadena de filtros a traves de una peticion del
- * cliente	
+ * Clase Main (equivalente a DemoInteceptor en el ejemplo) contiene el método 
+ * main que se ejecuta cuando se construye el Managed Bean {@link ControlMB} y
+ * de esta manera realizar el despliege de la interfaz y ejecutar la cadena de 
+ * filtros a traves de una peticion del cliente	
  */
-@WebListener
-public class Main implements ServletContextListener {
+public class Main  {
 
 	/** Atributo Cliente, estático para que pueda ser usado desde métodos estaticos. */
 	private static Cliente cli = null;
 
-	/* (non-Javadoc)
-	 * @see javax.servlet.ServletContextListener#contextDestroyed(javax.servlet.ServletContextEvent)
+	/**
+	 * Método main que crea e inicializa el gestor de filtros para posteriormente
+	 * crear un cliente, asignarle ese gestor y lanzar una petición
+	 * 
+	 * @param args No se usa, estan por convenio de los métodos main en java
 	 */
-	@Override
-	public void contextDestroyed(ServletContextEvent arg0) {
-		// TODO Auto-generated method stub
-
-	}
-
-	/* (non-Javadoc)
-	 * @see javax.servlet.ServletContextListener#contextInitialized(javax.servlet.ServletContextEvent)
-	 */
-	@Override
-	public void contextInitialized(ServletContextEvent arg0) {
+	public static void main(String[] args) {
+		
 		GestorFiltros gestor = new GestorFiltros(new Interfaz());
 
 		gestor.setFiltro(new Calcular());
@@ -48,7 +35,7 @@ public class Main implements ServletContextListener {
 		cli = new Cliente();
 
 		cli.setGestorFiltros(gestor);
-		cli.setPeticion(200);
+		cli.setPeticion(200.0);
 	}
 	
 	/**
@@ -73,7 +60,7 @@ public class Main implements ServletContextListener {
 	 */
 	public static boolean acelerar(){
 		if (cli!=null) {
-			cli.setPeticion(250);
+			cli.setPeticion(250.0);
 			return true;
 		}
 		
@@ -90,7 +77,7 @@ public class Main implements ServletContextListener {
 	 */
 	public static boolean parar(){
 		if (cli!=null) {
-			cli.setPeticion(-1);
+			cli.setPeticion(-1.0);
 			return true;
 		}
 		

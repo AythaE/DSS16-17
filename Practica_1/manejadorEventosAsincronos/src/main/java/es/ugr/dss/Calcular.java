@@ -9,7 +9,6 @@
  */
 package es.ugr.dss;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Calcular.
  */

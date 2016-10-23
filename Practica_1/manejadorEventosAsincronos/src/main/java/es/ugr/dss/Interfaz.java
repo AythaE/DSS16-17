@@ -23,6 +23,8 @@ import java.net.URISyntaxException;
 public class Interfaz {
 
 	
+	private final String  webAppAddr= "http://localhost:8080/EstevezAythami-P1/home.jsf";
+
 	/**
 	 * Método ejecutar invocado por {@link CadenaFiltros} al ser una instancia
 	 * de esta clase su objetivo.
@@ -40,7 +42,6 @@ public class Interfaz {
 	 */
 	public void ejecutar(Object o) {
 		
-			String webAppAddr= "http://localhost:8080/manejadorEventosAsincronos/home.jsf";
 			URI uri;
 			try {
 				uri = new URI(webAppAddr);

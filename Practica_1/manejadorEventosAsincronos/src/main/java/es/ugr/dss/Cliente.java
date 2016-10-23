@@ -34,7 +34,7 @@ public class Cliente {
 	 *
 	 * @param peticion the new peticion
 	 */
-	public void setPeticion(double peticion) {
+	public void setPeticion(Object peticion) {
 		
 		if (gestorFiltros!=null) {
 			gestorFiltros.peticionFiltro(peticion);
