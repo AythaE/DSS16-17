@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+
+	<title>Manejador de eventos asincronos</title>
+	
+	<h:outputStylesheet library="css" name="home.css"/> 
+
+</h:head>
+
+<h:body>
+
+	<div class="panel">
+		<h:panelGroup layout="block" >
+     		
+			<h2>#{controlMB.panel}</h2>
+			
+				
+			
+			<div class="form">
+				<h:form>
+				<div class="encenderBoton">
+				<h:commandButton id="encender" value="#{controlMB.txtBoton}"
+					actionListener="#{controlMB.onOff}"
+					style="background-color: #{controlMB.colorBoton}"/> 
+				</div>
+					
+				<div class="acelerarBoton">
+				<h:commandButton id="acelerar" value="Acelerar"
+					actionListener="#{controlMB.acelerar}"
+					/> 
+				</div>
+				
+				</h:form>
+			</div>
+		</h:panelGroup>
+	</div>
+</h:body>
+
+</html>

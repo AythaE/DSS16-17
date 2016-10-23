@@ -1,0 +1,4 @@
+Son 2 botones y unas revoluciones iniciales.
+
+Cuando apagado acelerar no afecta
+cuando encendido y acelerar solo muestra acelerando, velocidades concretas por terminal
