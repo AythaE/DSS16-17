@@ -71,7 +71,11 @@ public class ControlMB {
 			txtBoton= "Apagar";
 			colorBoton="red";
 			
-			Main.arrancar();
+			/*
+			 * Si se quisiera lanzar peticiones en el cliente cada vez que se
+			 * pulsa este botón se podría hacer con el método estático:
+			 * Main.arrancar();
+			 */
 		}
 		else{
 			estado=Estado.Apagado;
@@ -79,16 +83,29 @@ public class ControlMB {
 			txtBoton = "Encender";
 			colorBoton= "green";
 			
-			Main.parar();
+			/*
+			 * Si se quisiera lanzar peticiones en el cliente cada vez que se
+			 * pulsa este botón se podría hacer con el método estático:
+			 * Main.parar();
+			 */
 		}
 	}
 	
+	/**
+	 * ActionListener que controla la pulsación del boton de acelerar, como se
+	 * puede ver solo realiza algún cambio si el estado es encendido.
+	 * @param e ActionEvent
+	 */
 	public void acelerar(ActionEvent e){
 		
 		if (estado == Estado.Encendido) {
 			panel="Acelerando...";
 			
-			Main.acelerar();
+			/*
+			 * Si se quisiera lanzar peticiones en el cliente cada vez que se
+			 * pulsa este botón se podría hacer con el método estático:
+			 * Main.acelerar();
+			 */
 		}
 	}
 	

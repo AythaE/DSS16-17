@@ -1,3 +1,15 @@
+/**
+ * Archivo: home.css 
+ * Proyecto: manejadorEventosAsincronos
+ * 
+ * Autor: Aythami Estévez Olivas
+ * Email: aythae@correo.ugr.es
+ * Fecha: 23-oct-2016
+ * Asignatura: Desarrollo de Sistemas Software basados en Componentes y Servicios
+ *
+ * Fichero de estilo que fija el estilo gráfico de la interfaz de usuario 
+ * definida en home.xhtml
+ */
 .panel {
 	margin: auto;
 	width: 360px;
