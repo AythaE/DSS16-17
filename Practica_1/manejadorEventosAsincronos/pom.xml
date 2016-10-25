@@ -4,6 +4,10 @@
 	<groupId>es.ugr.dss</groupId>
 	<artifactId>EstevezAythami-P1</artifactId>
 	<packaging>war</packaging>
+	<!-- Añadido por problemas en windows http://stackoverflow.com/q/33530105 -->
+	<properties>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+	</properties>
 	<version>1.0-SNAPSHOT</version>
 	<name>EstevezAythami-P1 Maven Webapp</name>
 	<url>http://maven.apache.org</url>
@@ -28,5 +32,17 @@
 	</dependencies>
 	<build>
 		<finalName>EstevezAythami-P1</finalName>
+		<plugins>
+			<plugin>
+				<!-- Añadido por problemas en windows http://stackoverflow.com/q/33530105 -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 </project>
