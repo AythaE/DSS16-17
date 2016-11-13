@@ -2,6 +2,7 @@
 ##Descripción de contenido
 - `tutorial-p1.pdf` Guía de la practica 1.
 - `holamundo/` Contiene el proyecto hola mundo.
+- `manejadorEventosAsincronos/` Contiene la primera práctica entregable
 
 ##Entorno de trabajo
 - JDK 1.8.0_101
