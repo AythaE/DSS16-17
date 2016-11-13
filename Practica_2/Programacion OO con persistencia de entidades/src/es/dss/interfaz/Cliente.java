@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
@@ -370,7 +371,7 @@ public class Cliente extends JFrame implements ActionListener{
 	//@param urlString : Direccion a la que se desea realizar la peticion
 	//@param parametros : Parametros de la peticion
 	//@return : Respuesta obtenida tras la peticion o <tt>null</tt> en caso de fallar la peticion/respuesta 
-	@SuppressWarnings("deprecation")
+	
 	public InputStream realizarPeticionPost(String urlString, Map<String,String> parametros) {
 		String cadenaParametros = "";
 		boolean primerPar = true;
@@ -380,9 +381,15 @@ public class Cliente extends JFrame implements ActionListener{
 			} else {
 				primerPar = false;
 			}
-		    String parDeParametro = String.format("%s=%s", 
-					URLEncoder.encode(entry.getKey()), 
-					URLEncoder.encode(entry.getValue()));
+		    String parDeParametro="";
+			try {
+				parDeParametro = String.format("%s=%s", 
+						URLEncoder.encode(entry.getKey(),"UTF-8"), 
+						URLEncoder.encode(entry.getValue(), "UTF-8"));
+			} catch (UnsupportedEncodingException e) {
+				
+				e.printStackTrace();
+			}
 		    cadenaParametros += parDeParametro;
 		}
 		try {

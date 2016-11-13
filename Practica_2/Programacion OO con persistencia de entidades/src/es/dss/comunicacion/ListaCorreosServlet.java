@@ -21,11 +21,6 @@ public class ListaCorreosServlet extends HttpServlet{
 	 */
 	private static final long serialVersionUID = 1L;
 
-	
-	public ListaCorreosServlet() {
-		// TODO Auto-generated constructor stub
-		//bdUsuario = new BDUsuario();
-	}
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -108,7 +103,7 @@ public class ListaCorreosServlet extends HttpServlet{
 					user.setEmail(email);
 				} else {
 					oos.writeInt(1);
-					oos.writeObject("Error recuperando el Email del usuario");
+					oos.writeObject("Error con el Email del usuario");
 					oos.flush();
 					oos.close();
 					return;
@@ -118,7 +113,7 @@ public class ListaCorreosServlet extends HttpServlet{
 					user.setNombre(nombre);
 				} else {
 					oos.writeInt(1);
-					oos.writeObject("Error recuperando el nombre del usuario");
+					oos.writeObject("Error con el nombre del usuario");
 					oos.flush();
 					oos.close();
 					return;
@@ -128,7 +123,7 @@ public class ListaCorreosServlet extends HttpServlet{
 					user.setApellido(apellido);
 				} else {
 					oos.writeInt(1);
-					oos.writeObject("Error recuperando el apellido del usuario");
+					oos.writeObject("Error con el apellido del usuario");
 					oos.flush();
 					oos.close();
 					return;
@@ -160,7 +155,7 @@ public class ListaCorreosServlet extends HttpServlet{
 					user.setEmail(email);
 				} else {
 					oos.writeInt(1);
-					oos.writeObject("Error recuperando el Email del usuario");
+					oos.writeObject("Error con el Email del usuario");
 					oos.flush();
 					oos.close();
 					return;
@@ -170,7 +165,7 @@ public class ListaCorreosServlet extends HttpServlet{
 					user.setNombre(nombre);
 				} else {
 					oos.writeInt(1);
-					oos.writeObject("Error recuperando el nombre del usuario");
+					oos.writeObject("Error con el nombre del usuario");
 					oos.flush();
 					oos.close();
 					return;
@@ -180,7 +175,7 @@ public class ListaCorreosServlet extends HttpServlet{
 					user.setApellido(apellido);
 				} else {
 					oos.writeInt(1);
-					oos.writeObject("Error recuperando el apellido del usuario");
+					oos.writeObject("Error con el apellido del usuario");
 					oos.flush();
 					oos.close();
 					return;
@@ -209,7 +204,7 @@ public class ListaCorreosServlet extends HttpServlet{
 					user.setEmail(email);
 				} else {
 					oos.writeInt(1);
-					oos.writeObject("Error recuperando el Email del usuario");
+					oos.writeObject("Error con el Email del usuario");
 					oos.flush();
 					oos.close();
 					return;

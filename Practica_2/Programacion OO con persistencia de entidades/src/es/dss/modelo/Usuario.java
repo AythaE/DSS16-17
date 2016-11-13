@@ -26,8 +26,6 @@ public class Usuario implements Serializable {
 	public Usuario () {}
 	
 	public Usuario(Usuario usuario) {
-		// TODO Esta bien asignar id iguales???
-		//this.id = usuario.id;
 		
 		this.nombre = usuario.getNombre();
 		this.apellido = usuario.getApellido();
