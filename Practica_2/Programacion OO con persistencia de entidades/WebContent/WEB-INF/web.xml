@@ -6,7 +6,8 @@
 	id="WebApp_ID" version="3.1">
 	<display-name>Practica 2 DSS</display-name>
 	<welcome-file-list>
-
+		<!-- Añadido servlet para que se abra directamente al acceder a la url 
+			principal de la aplicación web -->
 		<welcome-file>ListaCorreosServlet</welcome-file>
 	</welcome-file-list>
 	<servlet>

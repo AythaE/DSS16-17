@@ -329,7 +329,6 @@ public class Cliente extends JFrame implements ActionListener{
 					parametros.put("email", email);		
 					ObjectInputStream respuesta = new ObjectInputStream(realizarPeticionPost(urlString, parametros));
 					int codigo = respuesta.readInt();
-					System.out.println(codigo);
 					String mensaje = (String) respuesta.readObject();					
 					switch (codigo) {
 						case 0:
