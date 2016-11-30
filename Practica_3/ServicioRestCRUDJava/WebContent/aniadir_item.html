@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Añadir item al cátalogo</title>
+</head>
+<body style="margin: auto; width: 50%;">
+	<h1 style="margin-left:auto; margin-right:auto; width: 70%; text-align: center">A&ntilde;adir item al
+		c&aacute;talogo</h1>
+	<form action="./rest/catalogo" method="post" enctype="application/x-www-form-urlencoded" style="margin:auto; width: 70%;">
+		<fieldset>
+			<label for="ID">ID: </label> 
+			<input type="number" name="ID" min="1" placeholder="4" required="required" /> 
+			<br><br> 
+			<label for="Nombre">Nombre:	</label>
+			<input type="text" name="Nombre" placeholder="Chaqueta de pana" required="required" /> 
+			<br><br>
+			<label for="Descripcion">Descripci&oacute;n:</label> 
+			<br>
+			<textarea name="Descripcion" rows="5" cols="40" placeholder="Chaqueta de pana en diversos colores con coderas" required="required" ></textarea>
+			<br><br>
+			<label for="Precio">Precio:	</label>
+			<input type="number" name="Precio" placeholder="19,95" step="0.01" min="0" required="required" /> €
+			<br><br>
+			<label for="Tallas">Tallas:	</label>
+			<input type="text" name="Tallas" placeholder="S, M, L" required="required" /> 
+			<br><br>
+			<label for="Color">Color: </label>
+			<select name="Color">
+				<option value="Rojo">Rojo</option>
+				<option value="Verde">Verde</option>
+				<option value="Azul">Azul</option>
+				<option value="Blanco">Blanco</option>
+				<option value="Negro">Negro</option>
+			</select>
+			<br><br><br>
+			<input type="submit" value="Añadir">
+			
+		</fieldset>
+	</form>
+</body>
+</html>
