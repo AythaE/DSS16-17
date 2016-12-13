@@ -7,8 +7,6 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Form;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import javax.xml.bind.JAXB;
-import javax.xml.bind.JAXBElement;
 
 import es.ugr.dss.modelo.ItemCatalogo;
 import es.ugr.dss.modelo.ItemCatalogo.Color;

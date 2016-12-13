@@ -1,0 +1,18 @@
+Para ejecutar el proyecto es necesario importarlo en eclipse, tras esto basta 
+con seleccionar Run As...>Run on server>Seleccionar el tomcat deseado
+
+Para usar la aplicación web basta con acceder a http://localhost:8080/EstevezAythami-P3/
+desde un navegador (en caso de que eclipse no haya abierto el suyo) desde esa
+página principal se puede acceder al listado de elementos del catalago o al 
+formulario para añadir un nuevo elemento.
+
+Para ejecutar el cliente hay que repetir el proceso pero seleccionando Run As..
+> Java application > Seleccionar la clase con el main (Cliente) y ya está
+
+Probado en:
+- Oracle JDK 1.8.0_111
+- Eclipse Java EE IDE for Web Developers. Version: Mars.2 Release (4.5.2)
+- Apache Tomcat 8.0.14
+- Debian 8.6
+- Jersey 2.24.1
+- JAX-RS 2.0.1
