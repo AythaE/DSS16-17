@@ -1,7 +1,8 @@
 # Práctica 4
 ## Descripción de contenido
-- `bpel.pdf` Guía de la practica 4.
-- `ServicioRestCRUDJava/` Contiene la tercera prática entregable
+- `bpel.pdf` Guía de la práctica 4.
+- `BilletesAvion/` Contiene la práctica 4.1
+- `Mercadeo/` Contiene la práctica 4.2
 - `BPEL-seminar.pdf` Seminario sobre el lenguaje de orquestación BPEL.
 
 ## Enunciado de la práctica 4
