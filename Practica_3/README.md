@@ -1,4 +1,4 @@
- # Práctica 3
+# Práctica 3
 ## Descripción de contenido
 - `P3-present.pdf` Guía de la practica 3.
 - `ServicioRestCRUDJava/` Contiene la tercera prática entregable
@@ -36,7 +36,7 @@ public enum TodoDao {
 
     todo.setDescripcion("Leer todo el material de http://...");
 
-    contentProvider.put("2", todo); 
+    contentProvider.put("2", todo);
 
   }
 
