@@ -1,0 +1,18 @@
+Para ejecutar el proyecto es necesario importarlo en eclipse, tras esto hay que
+arrancar un servidor "Apache Ode 1.x", una vez arrancado hacer click derecho en
+él y seleccionar "Add and Remove", desde ahí seleccionar EstevezAythami-P4_1 y 
+añadirlo a "Configured". Esperar unos segundos hasta que se muestre alguna
+salida por la terminal del servidor y listo, ya está desplegado 
+
+Para testear la aplicación he probado siguiendo el método dado en el guión pero
+por algún extraño error la opción te "Test with Web Services Explorer" da un 
+error y cierra Eclipse automáticamente. Así que he usado el programa Soap UI
+para testear los servicios web.
+
+Entorno de trabajo
+- Oracle JDK 1.8.0_111
+- Eclipse Java EE IDE for Web Developers. Version: Neon.1a Release (4.6.1)
+- BPEL Plugin 1.0.5
+- Apache Ode 1.3.6
+- Apache Tomcat 8.0.14
+- Debian 8.6

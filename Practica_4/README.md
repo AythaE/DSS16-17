@@ -2,7 +2,6 @@
 ## Descripción de contenido
 - `bpel.pdf` Guía de la práctica 4.
 - `BilletesAvion/` Contiene la práctica 4.1
-- `Mercadeo/` Contiene la práctica 4.2
 - `BPEL-seminar.pdf` Seminario sobre el lenguaje de orquestación BPEL.
 
 ## Enunciado de la práctica 4
@@ -37,3 +36,7 @@ Orquestar, de forma simplificada, el mercadeo entre un comprador y un vendedor d
 - Apache Ode 1.3.6
 - Apache Tomcat 8.0.14
 - Debian 8.6
+
+## Referencias
+#### Práctica 4.1
+[http://www.oracle.com/technetwork/articles/matjaz-bpel1-090575.html](http://www.oracle.com/technetwork/articles/matjaz-bpel1-090575.html)

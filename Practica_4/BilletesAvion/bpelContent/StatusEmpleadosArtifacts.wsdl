@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<definitions name="StatusEmpleados" targetNamespace="http://status_empleados"
+	xmlns:tns="http://status_empleados" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+	xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		TYPE DEFINITION - List of types participating in this BPEL process The BPEL 
+		Designer will generate default request and response types but you can define 
+		or import any XML Schema type and use them as part of the message types. 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<types>
+		<schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+			targetNamespace="http://status_empleados" xmlns="http://www.w3.org/2001/XMLSchema">
+
+			<element name="EmpleadoTipo">
+				<complexType>
+					<sequence>
+						<element name="Nombre" type="string" />
+						<element name="Apellidos" type="string" />
+					</sequence>
+				</complexType>
+			</element>
+
+			<element name="TipoPasajeAvion">
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="Clase turista"></enumeration>
+						<enumeration value="Clase business"></enumeration>
+						<enumeration value="Primera clase"></enumeration>
+
+					</restriction>
+				</simpleType>
+
+			</element>
+			
+		</schema>
+	</types>
+
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		MESSAGE TYPE DEFINITION - Definition of the message types used as part of 
+		the port type defintions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<message name="StatusEmpleadosRequestMessage">
+		<part name="empleado" element="tns:EmpleadoTipo" />
+	</message>
+	<message name="StatusEmpleadosResponseMessage">
+		<part name="tipoPasaje" element="tns:TipoPasajeAvion" />
+	</message>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		PORT TYPE DEFINITION - A port type groups a set of operations into a logical 
+		service unit. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+	<!-- portType implemented by the StatusEmpleados BPEL process -->
+	<portType name="StatusEmpleados">
+		<operation name="process">
+			<input message="tns:StatusEmpleadosRequestMessage" />
+			<output message="tns:StatusEmpleadosResponseMessage" />
+		</operation>
+	</portType>
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		PARTNER LINK TYPE DEFINITION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<plnk:partnerLinkType name="StatusEmpleados">
+		<plnk:role name="StatusEmpleadosProvider" portType="tns:StatusEmpleados" />
+	</plnk:partnerLinkType>
+
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		BINDING DEFINITION - Defines the message format and protocol details for 
+		a web service. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<binding name="StatusEmpleadosBinding" type="tns:StatusEmpleados">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="process">
+			<soap:operation soapAction="http://status_empleados/process" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+		</operation>
+	</binding>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		SERVICE DEFINITION - A service groups a set of ports into a service unit. 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<service name="StatusEmpleadosService">
+		<port name="StatusEmpleadosPort" binding="tns:StatusEmpleadosBinding">
+			<soap:address location="http://localhost:8080/ode/processes/StatusEmpleados" />
+		</port>
+	</service>
+</definitions>
