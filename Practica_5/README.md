@@ -67,11 +67,11 @@ Por último tambéen tiene la opción de buscar juegos similares mediante un Web
 
 En el siguiente diagrama de arquitectura podemos apreciar como se estructura la aplicación, que sigue el patrón Modelo-Vista-Controlador.
 
-![Diagrama de arquitectura](ESDLA-Quiz/Diagrama de arquitectura.png "Diagrama de arquitectura")
+![Diagrama de arquitectura](diagrams/Diagrama de arquitectura.png "Diagrama de arquitectura")
 
 En este otro diagrama de clases se puede observar como se relacionan las clases de la aplicación. Aparecen algunas clases como `BaseAdapter`, `AppCompatActivity` y `SQLiteOpenHelper` que son clases pertenecientes al Framework de Android y son extendidas por algunas de las clases de la aplicación como se puede ver. También cabe destacar como se aprecia en la clase `DBHelper` que posee una instancia de si misma, lo que junto a su constructor privado y su método `getInstance()` indica que esta clase sigue el patrón Singleton. Por último mencionar que las clases se han intentado colocar de arriba a abajo siguiendo el patrón arquitectónico MVC.
 
-![Diagrama de clases](ESDLA-Quiz/DiagramaClases.png "Diagrama de clases")
+![Diagrama de clases](diagrams/DiagramaClases.png "Diagrama de clases")
 
 
 ## Despliegue de la aplicación mediante un APK firmado
